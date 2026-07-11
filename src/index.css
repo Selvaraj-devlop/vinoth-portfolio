@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Theme: Dark with Red & Orange mix */
+    --color-primary: 255 75 43;
+    --color-primary-dark: 217 56 28;
+    --color-secondary: 255 167 81;
+    --color-secondary-dark: 230 138 52;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+  
+  /* Decrease full page font size on tablet view */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    html {
+      font-size: 14px;
+    }
+  }
+  body, html {
+    cursor: none;
+  }
+  a, button, [role="button"], input, textarea, select {
+    cursor: none !important;
+  }
+  body {
+    @apply antialiased text-text-main bg-background font-sans overflow-x-hidden transition-colors duration-500;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-surface/40 backdrop-blur-md border border-border/50 shadow-xl;
+  }
+
+  .animate-marquee-1 {
+    animation: marquee-reverse 40s linear infinite;
+  }
+  .animate-marquee-2 {
+    animation: marquee 45s linear infinite;
+  }
+  .animate-marquee-3 {
+    animation: marquee-reverse 50s linear infinite;
+  }
+  .animate-wave-1 {
+    animation: wave-1 8s ease-in-out infinite;
+  }
+  .animate-wave-2 {
+    animation: wave-2 10s ease-in-out infinite;
+  }
+  .animate-wave-3 {
+    animation: wave-1 9s ease-in-out infinite;
+  }
+  .glass {
+    @apply bg-surface/50 backdrop-blur-lg border border-border/50;
+  }
+  .neon-border {
+    @apply relative before:absolute before:inset-0 before:p-[1px] before:-z-10 before:rounded-[inherit] before:bg-gradient-to-r before:from-primary before:to-secondary;
+  }
+  .neon-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+@keyframes wave-1 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes wave-2 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(20px); }
+}
