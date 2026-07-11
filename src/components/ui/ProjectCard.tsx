@@ -19,7 +19,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
     >
       <Link to={`/projects/${project.slug}`} className="flex flex-col h-full">
         {/* Image Top */}
-        <div className="relative h-64 w-full overflow-hidden shrink-0">
+        <div className="relative h-48 md:h-52 w-full overflow-hidden shrink-0">
           <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors z-10" />
           <img 
             src={project.coverImage} 
@@ -29,11 +29,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         </div>
         
         {/* Content Bottom */}
-        <div className="p-6 md:p-8 flex-grow flex flex-col">
-          <span className="text-primary text-xs font-bold uppercase tracking-widest mb-2">
+        <div className="p-5 md:p-6 flex-grow flex flex-col">
+          <span className="text-primary text-[10px] font-bold uppercase tracking-widest mb-2">
             {project.category}
           </span>
-          <h3 className="text-2xl font-bold text-white group-hover:text-primary transition-colors mt-auto">
+          <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-primary transition-colors mt-auto leading-tight">
             {project.title}
           </h3>
         </div>

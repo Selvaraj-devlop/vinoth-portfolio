@@ -43,18 +43,18 @@ const services = [
 
 export const ServicesSection = () => {
   return (
-    <section id="services" className="py-24 relative overflow-hidden">
+    <section id="services" className="py-16 relative overflow-hidden">
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[150px] pointer-events-none z-0" />
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="text-4xl md:text-5xl font-black text-white mb-4 tracking-tight"
+            className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight"
           >
             My <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Services</span>
           </motion.h2>

@@ -23,7 +23,7 @@ const steps = [
 
 export const DesignProcessSection = () => {
   return (
-    <section id="process" className="py-24 bg-surface/30">
+    <section id="process" className="py-16 bg-surface/30">
       <div className="container mx-auto px-6 md:px-12">
         <SectionHeading 
           title="Design Process" 

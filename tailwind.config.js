@@ -15,9 +15,9 @@ export default {
           DEFAULT: 'rgb(var(--color-secondary) / <alpha-value>)',
           dark: 'rgb(var(--color-secondary-dark) / <alpha-value>)',
         },
-        background: '#0d1117',
-        surface: '#161b22',
-        border: '#30363d',
+        background: '#1e2128',
+        surface: '#2a2d35',
+        border: '#3f4451',
         text: {
           main: '#f0f6fc',
           muted: '#8b949e',

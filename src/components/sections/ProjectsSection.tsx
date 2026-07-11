@@ -5,14 +5,14 @@ import { ProjectCard } from '../ui/ProjectCard';
 
 export const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-24 relative">
+    <section id="projects" className="py-16 relative">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="text-4xl md:text-5xl font-bold text-white mb-4"
+            className="text-3xl md:text-4xl font-bold text-white mb-4"
           >
             Project <span className="text-primary text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Experience</span>
           </motion.h2>
