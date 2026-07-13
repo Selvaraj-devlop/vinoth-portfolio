@@ -28,7 +28,7 @@ export const ProjectsSection = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {projects.slice(0, 2).map((project, index) => (
+          {projects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </div>

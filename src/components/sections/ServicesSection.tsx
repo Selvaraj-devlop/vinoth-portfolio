@@ -4,8 +4,8 @@ import { Palette, LayoutTemplate, Search, PenTool, Layers, MonitorPlay } from 'l
 
 const services = [
   {
-    title: 'Product Redesign',
-    description: 'Identifying usability gaps and redesigning legacy products to improve clarity, flow, and user conversion rates.',
+    title: 'UI Audit',
+    description: 'UX audit to enhance accessibility,\nvisual consistency, mobile responsiveness,\nand overall performance, ensuring a smoother user experience.',
     icon: Palette,
     color: 'primary'
   },
@@ -104,7 +104,7 @@ export const ServicesSection = () => {
                   {service.title}
                 </h3>
                 
-                <p className="text-text-muted leading-relaxed text-sm font-light relative z-10">
+                <p className="text-text-muted leading-relaxed text-lg font-light whitespace-pre-line relative z-10">
                   {service.description}
                 </p>
               </motion.div>

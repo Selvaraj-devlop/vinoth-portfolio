@@ -59,7 +59,7 @@ export const SkillsSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight"
+            className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight"
           >
             My <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Skills</span>
           </motion.h2>
@@ -68,7 +68,7 @@ export const SkillsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ delay: 0.1 }}
-            className="text-text-muted text-xs md:text-lg font-medium tracking-[0.2em] uppercase"
+            className="text-text-muted text-[10px] md:text-[12px] font-medium tracking-[0.2em] uppercase"
           >
             Tools and expertise I bring to the table
           </motion.p>
@@ -96,7 +96,7 @@ export const SkillsSection = () => {
                 <div className={`p-4 rounded-2xl bg-white/5 border border-white/10 transition-colors duration-300 shadow-lg ${category.colorClasses.iconText} ${category.colorClasses.iconBg}`}>
                   {category.icon}
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-[0.2em] text-white/90 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary transition-all duration-300">
+                <h3 className="text-xl md:text-2xl font-bold uppercase tracking-[0.2em] text-white/90 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary transition-all duration-300">
                   {category.label}
                 </h3>
               </div>
@@ -106,7 +106,7 @@ export const SkillsSection = () => {
                 {category.skills.map((skill) => (
                   <span 
                     key={skill}
-                    className="px-3 py-1.5 md:px-4 md:py-2 text-[10px] md:text-[12px] font-medium text-text-muted bg-white/5 border border-white/10 rounded-lg backdrop-blur-md group-hover:border-white/20 transition-all duration-300 hover:!text-white hover:!bg-white/10 hover:!border-white/40 cursor-default"
+                    className="px-3 py-1.5 md:px-4 md:py-2 text-[9px] md:text-[11px] font-medium text-text-muted bg-white/5 border border-white/10 rounded-lg backdrop-blur-md group-hover:border-white/20 transition-all duration-300 hover:!text-white hover:!bg-white/10 hover:!border-white/40 cursor-default"
                   >
                     {skill}
                   </span>

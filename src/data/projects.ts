@@ -35,21 +35,41 @@ export const projects: Project[] = [
     duration: '4 Months',
     result: 'Successfully launched in 3 states with over 10,000 active patients in the first month.',
   },
+
   {
-    id: '3',
-    slug: 'ecommerce-redesign',
-    title: 'Modern E-commerce Experience',
-    category: 'Web Design',
-    shortDescription: 'A complete overhaul of a boutique fashion retailer\'s online presence to improve conversion rates.',
-    fullDescription: 'Redesigned the end-to-end shopping experience, from product discovery to checkout, focusing on high-quality visuals and frictionless payments.',
-    coverImage: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&q=80&w=1000',
-    images: [
-      'https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&q=80&w=1000'
-    ],
-    toolsUsed: ['Figma', 'Miro', 'After Effects'],
-    role: 'UI/UX Designer',
-    duration: '2 Months',
-    result: 'Improved checkout conversion rate by 22% and average order value by 15%.',
-    liveProjectLink: '#'
-  }
+    id: '4',
+    slug: 'star-bag-leather-ecommerce',
+      title: 'Star Bag Leather E‑Commerce',
+      category: 'UI/UX Design',
+      shortDescription: 'A boutique online store for premium leather bags featuring seamless shopping experience.',
+      fullDescription: 'Designed and built a full‑stack e‑commerce platform for Star Bag, focusing on high‑resolution product visuals, custom configurator, and secure checkout integration.',
+      coverImage: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&q=80&w=1000',
+      images: [
+        'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&q=80&w=1000',
+        'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&q=80&w=1000'
+      ],
+      toolsUsed: ['Next.js', 'Tailwind CSS', 'Stripe', 'Sanity.io'],
+      role: 'Full‑Stack Developer',
+      duration: '3 Months',
+      result: 'Achieved 30% increase in conversion rate and 25% higher average order value.',
+      liveProjectLink: '#'
+    },
+    {
+      id: '5',
+      slug: 'turf-management-app',
+      title: 'Turf Management App',
+      category: 'Mobile App Design',
+      shortDescription: 'A mobile app UI design for booking and managing sports turfs with real‑time availability.',
+      fullDescription: 'Designed a seamless cross‑platform mobile application interface that allows users to discover, book, and pay for turf slots, alongside an intuitive admin dashboard for turf owners.',
+      coverImage: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1000',
+      images: [
+        'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1000',
+        'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&q=80&w=1000'
+      ],
+      toolsUsed: ['Figma', 'Protopie', 'Adobe Illustrator'],
+      role: 'UI/UX Designer',
+      duration: '2 Months',
+      result: 'Onboarded 50+ active users within first month, 95% booking success rate.',
+      liveProjectLink: '#'
+    }
 ];
