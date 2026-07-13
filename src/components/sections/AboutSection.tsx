@@ -55,7 +55,7 @@ export const AboutSection = () => {
              
              {/* Inner glow */}
              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-[60px] group-hover:bg-primary/40 transition-colors duration-500 z-0" />
-             <h3 className="text-lg md:text-2xl font-light uppercase tracking-[0.2em] text-white/90 mb-2 relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary transition-all duration-300">Hello, I'm Vinoth</h3>
+             <h3 className="text-lg md:text-2xl font-bold uppercase tracking-[0.2em] text-white/90 mb-2 relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary transition-all duration-300">Hello, I'm Vinoth</h3>
              <h4 className="text-primary font-bold tracking-widest uppercase mb-3 md:mb-4 text-[10px] md:text-sm relative z-10">UI/UX Designer • Product Designer • Problem Solver</h4>
              <p className="text-text-muted text-xs md:text-base leading-relaxed relative z-10 font-light">
                I am a dedicated designer with hands-on internship experience across multiple organizations, delivering real-time, user-centered solutions for web and mobile platforms. 
@@ -96,7 +96,7 @@ export const AboutSection = () => {
              <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/10 to-secondary/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out pointer-events-none z-0" />
              <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
              <div className="text-4xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-primary to-secondary mb-1 md:mb-2 group-hover:scale-110 transition-transform duration-500 drop-shadow-[0_0_15px_rgba(var(--color-primary),0.5)] relative z-10">
-               4
+               3
              </div>
              <h3 className="text-sm md:text-lg font-light uppercase tracking-[0.2em] text-white/90 relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary transition-all duration-300">Organizations</h3>
              <p className="text-[9px] md:text-xs text-text-muted mt-1 md:mt-2 font-light relative z-10">Internship Experience</p>
@@ -112,7 +112,7 @@ export const AboutSection = () => {
           >
              {/* Hover gradient background slide */}
              <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/10 to-secondary/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out pointer-events-none z-0" />
-             <h3 className="text-base md:text-xl font-light uppercase tracking-[0.2em] text-white/90 mb-4 md:mb-8 relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary transition-all duration-300">Design Thinking Process</h3>
+             <h3 className="text-base md:text-xl font-bold uppercase tracking-[0.2em] text-white/90 mb-4 md:mb-8 relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary transition-all duration-300">Design Thinking Process</h3>
              
              <div className="flex items-start md:items-center justify-between gap-1 md:gap-4 relative z-10 w-full">
                 <ProcessNode icon={<Search className="w-3 h-3 md:w-6 md:h-6" />} label="Research" />
@@ -143,7 +143,7 @@ export const AboutSection = () => {
              </div>
              
              <div className="text-center md:text-left relative z-10">
-               <h3 className="text-lg md:text-2xl font-light uppercase tracking-[0.2em] text-white/90 mb-2 md:mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary transition-all duration-300">Cross-Functional Collaboration</h3>
+               <h3 className="text-lg md:text-2xl font-bold uppercase tracking-[0.2em] text-white/90 mb-2 md:mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary transition-all duration-300">Cross-Functional Collaboration</h3>
                <p className="text-text-muted text-xs md:text-base max-w-4xl leading-relaxed font-light">
                  I enjoy collaborating closely with developers and cross-functional teams to ensure designs are successfully implemented. I am skilled at delivering clean, accessible, and highly functional interfaces even under tight deadlines.
                </p>
