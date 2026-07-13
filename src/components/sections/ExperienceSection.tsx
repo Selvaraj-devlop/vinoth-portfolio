@@ -26,6 +26,19 @@ const experiences = [
       'Created color systems, typography scales, and landing page layouts',
       'Strengthened core UX principles: consistency, accessibility, user-centered design'
     ]
+  },
+  {
+    id: '3',
+    role: 'UI/UX Intern (Remote)',
+    company: 'CodSoft',
+    duration: 'Oct 2025 – Nov 2025',
+    location: 'Kolkata, West Bengal, India',
+    points: [
+      'Designed a complete mobile signup flow, email template, restaurant menu, and e-commerce UI based on client requirements',
+      'Applied auto-layout, components, wireframing, and high-fidelity prototyping to improve practical Figma skills',
+      'Created clean, user-friendly layouts with clear navigation, visual hierarchy, and responsive structure',
+      'Maintained a GitHub repository documenting all tasks and produced demo videos showcasing the design process'
+    ]
   }
 ];
 
@@ -39,7 +52,7 @@ export const ExperienceSection = () => {
   });
 
   return (
-    <section id="experience" className="py-16 md:py-20 relative overflow-hidden">
+    <section id="experience" className="py-10 relative overflow-hidden">
       {/* Background glow */}
       <div className="absolute top-1/2 right-0 translate-x-1/3 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[150px] pointer-events-none z-0" />
 

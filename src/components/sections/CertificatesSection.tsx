@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion, useMotionValue, useTransform } from 'framer-motion';
-import { Award, ExternalLink } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { motion, useMotionValue, useTransform, AnimatePresence } from 'framer-motion';
+import { Award, ExternalLink, X } from 'lucide-react';
 
 // Import real images from assets
 import imgCgsExp from '../../assets/images/CGS_EXP_CET.png';
@@ -39,7 +39,7 @@ const certificates = [
   }
 ];
 
-const CertificateCard = ({ cert, index }: { cert: any, index: number }) => {
+const CertificateCard = ({ cert, index, onClick }: { cert: any, index: number, onClick: () => void }) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   
@@ -69,6 +69,7 @@ const CertificateCard = ({ cert, index }: { cert: any, index: number }) => {
       transition={{ duration: 0.6, delay: index * 0.1 }}
       style={{ perspective: 1000 }}
       className="relative z-10"
+      onClick={onClick}
     >
       <motion.div
         onMouseMove={handleMouseMove}
@@ -113,40 +114,103 @@ const CertificateCard = ({ cert, index }: { cert: any, index: number }) => {
 };
 
 export const CertificatesSection = () => {
+  const [selectedCert, setSelectedCert] = useState<any>(null);
+
+  // Prevent background scrolling when modal is open
+  useEffect(() => {
+    if (selectedCert) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedCert]);
+
   return (
-    <section id="certificates" className="py-16 relative overflow-hidden">
-      {/* Background ambient glows */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[150px] pointer-events-none z-0" />
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-[150px] pointer-events-none z-0" />
+    <>
+      <section id="certificates" className="py-10 relative overflow-hidden">
+        {/* Background ambient glows */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[150px] pointer-events-none z-0" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-[150px] pointer-events-none z-0" />
 
-      <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-7xl">
-        <div className="text-center mb-10 md:mb-10">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight"
-          >
-            My <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Certificates</span>
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.1 }}
-            className="text-text-muted text-xs md:text-sm font-medium tracking-[0.3em] uppercase"
-          >
-            Professional milestones
-          </motion.p>
-        </div>
+        <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-7xl">
+          <div className="text-center mb-10 md:mb-10">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight"
+            >
+              My <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Certificates</span>
+            </motion.h2>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.1 }}
+              className="text-text-muted text-xs md:text-sm font-medium tracking-[0.3em] uppercase"
+            >
+              Professional milestones
+            </motion.p>
+          </div>
 
-        {/* 3D Certificate Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
-          {certificates.map((cert, index) => (
-            <CertificateCard key={cert.id} cert={cert} index={index} />
-          ))}
+          {/* 3D Certificate Gallery Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
+            {certificates.map((cert, index) => (
+              <CertificateCard 
+                key={cert.id} 
+                cert={cert} 
+                index={index} 
+                onClick={() => setSelectedCert(cert)}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Image Lightbox Modal */}
+      <AnimatePresence>
+        {selectedCert && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedCert(null)}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-12 bg-black/80 backdrop-blur-sm"
+          >
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative w-full max-w-5xl max-h-full rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl bg-surface border border-white/10 flex flex-col"
+            >
+              <button 
+                onClick={() => setSelectedCert(null)}
+                className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center border border-white/20 text-white hover:bg-white/20 transition-colors"
+              >
+                <X className="w-5 h-5" />
+              </button>
+              <div className="p-4 md:p-6 pb-0 flex flex-col shrink-0">
+                <h3 className="text-xl md:text-2xl font-bold text-white">{selectedCert.title}</h3>
+                <p className="text-primary text-sm font-medium tracking-wider uppercase mt-1">{selectedCert.organization}</p>
+              </div>
+              <div className="p-4 md:p-6 flex-1 min-h-0 flex items-center justify-center overflow-hidden">
+                <img 
+                  src={selectedCert.image} 
+                  alt={selectedCert.title} 
+                  className="max-w-full max-h-[70vh] object-contain rounded-xl"
+                />
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 };

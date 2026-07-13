@@ -13,12 +13,14 @@ const DribbbleIcon = ({ className }: { className?: string }) => (
 );
 
 const BehanceIcon = ({ className }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 14s-1 0-1-1 1-4 4-4 4 2 4 4v2H6s0 3 4 3c3 0 4-2 4-2"></path><line x1="7" y1="10" x2="13" y2="10"></line></svg>
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.226-2.477-2.226-1.369 0-2.339.728-2.488 2.226zm-8.504-3h-7.536v-9h7.536c3.413 0 5.122 1.956 5.122 4.12 0 1.579-1.026 2.766-2.457 3.376 1.76.671 2.923 2.016 2.923 4.254 0 2.503-1.921 4.25-5.588 4.25h-7.536v-9zm0 2v-4.5h-4.5v4.5h4.5zm.372 4.5v-4.5h-4.872v4.5h4.872z"/>
+  </svg>
 );
 
 export const ContactSection = () => {
   return (
-    <section id="contact" className="py-16 relative overflow-hidden">
+    <section id="contact" className="py-10 relative overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[150px] pointer-events-none z-0" />
 
@@ -104,14 +106,14 @@ export const ContactSection = () => {
               <div className="pt-6 mt-6 border-t border-white/10">
                 <p className="text-xs text-text-muted uppercase tracking-widest mb-4">Follow Me</p>
                 <div className="flex gap-4">
-                  <a href="#" className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-secondary/20 hover:border-secondary/50 transition-all hover:-translate-y-1 shadow-lg group/social">
+                  <a href="https://www.linkedin.com/in/vinothdesigner" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-secondary/20 hover:border-secondary/50 transition-all hover:-translate-y-1 shadow-lg group/social">
                     <LinkedinIcon className="w-5 h-5 text-white group-hover/social:text-secondary transition-colors" />
                   </a>
-                  <a href="#" className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-secondary/20 hover:border-secondary/50 transition-all hover:-translate-y-1 shadow-lg group/social">
-                    <DribbbleIcon className="w-5 h-5 text-white group-hover/social:text-secondary transition-colors" />
-                  </a>
-                  <a href="#" className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-secondary/20 hover:border-secondary/50 transition-all hover:-translate-y-1 shadow-lg group/social">
+                  <a href="https://www.behance.net/vinothp24" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-secondary/20 hover:border-secondary/50 transition-all hover:-translate-y-1 shadow-lg group/social">
                     <BehanceIcon className="w-5 h-5 text-white group-hover/social:text-secondary transition-colors" />
+                  </a>
+                  <a href="mailto:vinothuiuxdesigner@gmail.com" className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-secondary/20 hover:border-secondary/50 transition-all hover:-translate-y-1 shadow-lg group/social">
+                    <Mail className="w-5 h-5 text-white group-hover/social:text-secondary transition-colors" />
                   </a>
                 </div>
               </div>
@@ -163,12 +165,16 @@ export const ContactSection = () => {
                   </div>
                 </div>
                 
-                <button 
+                <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-3 px-8 py-5 rounded-2xl bg-white/10 border border-white/20 text-white font-bold tracking-wide hover:bg-primary hover:border-primary/50 transition-all duration-300 shadow-lg group/btn mt-8"
+                  className="relative group w-full inline-flex items-center justify-center px-7 py-2.5 text-sm font-bold tracking-wide rounded-full overflow-hidden transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(var(--color-primary),0.3)] hover:shadow-[0_0_30px_rgba(var(--color-primary),0.6)]"
                 >
-                  <span>Send Message</span>
-                  <Send className="w-5 h-5 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto] animate-gradient-x" />
+                  <div className="absolute inset-[2px] bg-black/40 rounded-full group-hover:bg-transparent transition-colors duration-300" />
+                  <span className="relative z-10 text-white flex items-center gap-2">
+                    Send Message
+                    <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  </span>
                 </button>
               </form>
             </div>

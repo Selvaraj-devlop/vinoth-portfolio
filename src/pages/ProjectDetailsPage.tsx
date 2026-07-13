@@ -26,7 +26,7 @@ export const ProjectDetailsPage = () => {
     <PageTransition>
       <div className="min-h-screen bg-background">
         {/* Full Bleed Immersive Hero Section */}
-        <div className="relative w-full h-[50vh] min-h-[400px] flex items-end">
+        <div className="relative w-full h-[50vh] min-h-[450px] flex items-end">
           <div className="absolute inset-0 z-0">
             <img 
               src={project.coverImage} 
@@ -38,14 +38,14 @@ export const ProjectDetailsPage = () => {
             <div className="absolute inset-0 bg-black/40" />
           </div>
           
-          <div className="relative z-10 w-full pb-16">
+          <div className="relative z-10 w-full pb-16 pt-24 md:pt-40">
             <div className="container mx-auto px-6 md:px-12">
               <motion.div 
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <Link to="/#projects" className="inline-flex items-center text-white/70 hover:text-white transition-colors mb-6 backdrop-blur-md bg-white/5 px-4 py-2 rounded-full border border-white/10 text-sm font-medium uppercase tracking-widest">
+                <Link to="/#projects" className="inline-flex items-center text-white hover:text-white transition-all hover:-translate-x-1 mb-6 backdrop-blur-xl bg-black/60 px-5 py-3 rounded-full border border-white/25 text-xs md:text-sm font-bold uppercase tracking-widest shadow-2xl z-30 relative">
                   <ArrowLeft className="w-4 h-4 mr-2" /> Back to Portfolio
                 </Link>
                 <div className="flex items-center gap-3 mb-4">
@@ -104,19 +104,7 @@ export const ProjectDetailsPage = () => {
                 </div>
               </div>
               
-              {(project.liveProjectLink || project.caseStudyLink) && (
-                <div className="mt-4 md:mt-0 w-full md:w-auto">
-                  <Button 
-                    as="a" 
-                    href={project.liveProjectLink || project.caseStudyLink} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-full md:w-auto flex items-center justify-center gap-2 px-8 py-4 text-sm font-bold uppercase tracking-widest shadow-lg shadow-primary/25"
-                  >
-                    View Live <ExternalLink size={16} />
-                  </Button>
-                </div>
-              )}
+
             </div>
           </motion.div>
 
@@ -151,43 +139,7 @@ export const ProjectDetailsPage = () => {
             </motion.div>
           </div>
 
-          {/* Process & Gallery */}
-          {project.images && project.images.length > 0 && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-            >
-              <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                  Project <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Gallery</span>
-                </h2>
-                <p className="text-text-muted text-lg">Visual highlights from the design process</p>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                {project.images.map((image, index) => (
-                  <motion.div
-                    key={index}
-                    whileHover={{ scale: 1.02 }}
-                    transition={{ duration: 0.3 }}
-                    className={`rounded-2xl overflow-hidden shadow-xl border border-white/10 group ${
-                      index === 2 ? 'md:col-span-2' : ''
-                    }`}
-                  >
-                    <div className="relative aspect-video w-full">
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
-                      <img 
-                        src={image} 
-                        alt={`${project.title} gallery ${index + 1}`} 
-                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" 
-                      />
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          )}
+
         </div>
       </div>
     </PageTransition>

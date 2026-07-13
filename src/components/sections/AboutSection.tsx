@@ -13,7 +13,7 @@ const ProcessNode = ({ icon, label }: { icon: React.ReactNode, label: string }) 
 
 export const AboutSection = () => {
   return (
-    <section id="about" className="py-16 relative overflow-hidden">
+    <section id="about" className="py-10 relative overflow-hidden">
       {/* Background glows */}
       <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-secondary/10 rounded-full blur-[120px] pointer-events-none" />

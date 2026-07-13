@@ -5,7 +5,7 @@ import { ProjectCard } from '../ui/ProjectCard';
 
 export const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-16 relative">
+    <section id="projects" className="py-10 relative">
       <div className="container mx-auto px-6 md:px-12">
         <div className="text-center mb-10">
           <motion.h2 

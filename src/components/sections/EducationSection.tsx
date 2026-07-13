@@ -43,7 +43,7 @@ export const EducationSection = () => {
   });
 
   return (
-    <section id="education" className="py-16 relative overflow-hidden">
+    <section id="education" className="py-10 relative overflow-hidden">
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-secondary/5 rounded-full blur-[150px] pointer-events-none z-0" />
 

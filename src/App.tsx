@@ -4,6 +4,7 @@ import { AnimatePresence } from 'framer-motion';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { ScrollToTop } from './components/ui/ScrollToTop';
+import { ScrollToTopButton } from './components/ui/ScrollToTopButton';
 import { CustomCursor } from './components/ui/CustomCursor';
 import { StarryBackground } from './components/ui/StarryBackground';
 import { HomePage } from './pages/HomePage';
@@ -31,6 +32,7 @@ function App() {
           </AnimatePresence>
         </main>
         <Footer />
+        <ScrollToTopButton />
       </div>
     </Router>
   );

@@ -4,7 +4,7 @@ import { Palette, LayoutTemplate, Search, PenTool, Layers, MonitorPlay } from 'l
 
 const services = [
   {
-    title: 'UI Audit',
+    title: 'UX Audit',
     description: 'UX audit to enhance accessibility,\nvisual consistency, mobile responsiveness,\nand overall performance, ensuring a smoother user experience.',
     icon: Palette,
     color: 'primary'
@@ -43,7 +43,7 @@ const services = [
 
 export const ServicesSection = () => {
   return (
-    <section id="services" className="py-16 relative overflow-hidden">
+    <section id="services" className="py-10 relative overflow-hidden">
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[150px] pointer-events-none z-0" />
 
