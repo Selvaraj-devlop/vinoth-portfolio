@@ -2,7 +2,7 @@ import { Project } from '../types';
 
 import imgDreamClg from '../assets/images/dream clg.jpeg';
 import imgCrm from '../assets/images/crm.webp';
-import imgEcommerce from '../assets/images/e-commerce.webp';
+import imgEcommerce from '../assets/images/e-commerce.jpeg';
 import imgTurf from '../assets/images/turf.png';
 
 export const projects: Project[] = [
@@ -16,7 +16,7 @@ export const projects: Project[] = [
     coverImage: imgDreamClg,
     images: [],
     toolsUsed: ['Figma', 'User Research', 'Wireframing', 'Prototyping'],
-    role: 'Product Designer',
+    role: 'UI/UX Designer',
     duration: 'Nov 2025 – Feb 2026',
     result: 'Delivered a simple, accessible, and user-friendly platform tailored to the needs of rural student users in Coimbatore, India.',
     problem: 'Rural students in India face significant barriers accessing higher education information — poor internet connectivity, lack of digital literacy, and no centralized platform for discovering colleges matching their eligibility and preferences.',
@@ -102,7 +102,7 @@ export const projects: Project[] = [
     coverImage: imgTurf,
     images: [],
     toolsUsed: ['Figma', 'Cloud App', 'Layablo', 'Google Slides', 'Layaldo'],
-    role: 'Product Designer',
+    role: 'UI/UX Designer',
     duration: '2 months',
     result: 'Onboarded 50+ active users within first month, 95% booking success rate.',
     problem: 'Turf operators struggle with slot overlaps, uncoordinated phone reservation inputs, manual payment validation, and a lack of visual data regarding booking distributions and sales peaks.',

@@ -203,18 +203,6 @@ export const ProjectDetailsPage = () => {
               )}
 
 
-              {/* The Result */}
-              <motion.section {...fadeUp}>
-                <div className="rounded-2xl bg-white/[0.03] border border-white/10 p-6 md:p-8">
-                  <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center gap-3">
-                    <Layout className="w-6 h-6 text-secondary" />
-                    The Result
-                  </h2>
-                  <p className="text-text-muted text-base leading-relaxed">
-                    {project.result}
-                  </p>
-                </div>
-              </motion.section>
 
             </div>
           </div>

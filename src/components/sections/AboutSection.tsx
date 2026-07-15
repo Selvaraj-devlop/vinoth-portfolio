@@ -56,7 +56,7 @@ export const AboutSection = () => {
              {/* Inner glow */}
              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-[60px] group-hover:bg-primary/40 transition-colors duration-500 z-0" />
              <h3 className="text-lg md:text-2xl font-bold uppercase tracking-[0.2em] text-white/90 mb-2 relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary transition-all duration-300">Hello, I'm Vinoth</h3>
-             <h4 className="text-primary font-bold tracking-widest uppercase mb-3 md:mb-4 text-[10px] md:text-sm relative z-10">UI/UX Designer • Product Designer • Problem Solver</h4>
+             <h4 className="text-primary font-bold tracking-widest uppercase mb-3 md:mb-4 text-[10px] md:text-sm relative z-10">UI/UX Designer • Web & Mobile Designer • Problem Solver</h4>
              <p className="text-text-muted text-xs md:text-base leading-relaxed relative z-10 font-light">
                I am a dedicated designer with hands-on internship experience across multiple organizations, delivering real-time, user-centered solutions for web and mobile platforms. 
                From <span className="text-white font-medium">CRM dashboards</span> and vendor management systems to <span className="text-white font-medium">e-commerce experiences</span>, I specialize in the complete end-to-end design thinking process.
