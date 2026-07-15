@@ -202,20 +202,6 @@ export const ProjectDetailsPage = () => {
                 </motion.section>
               )}
 
-              {/* Impact & Learnings */}
-              {project.impact && (
-                <motion.section {...fadeUp}>
-                  <div className="rounded-2xl bg-gradient-to-br from-primary/5 to-secondary/5 border border-white/10 p-6 md:p-8">
-                    <h2 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-4 flex items-center gap-3">
-                      <Zap className="w-6 h-6 text-primary" />
-                      Impact & Learnings
-                    </h2>
-                    <p className="text-text-muted text-base leading-relaxed">
-                      {project.impact}
-                    </p>
-                  </div>
-                </motion.section>
-              )}
 
               {/* The Result */}
               <motion.section {...fadeUp}>

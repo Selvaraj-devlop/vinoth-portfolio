@@ -80,8 +80,7 @@ export const HeroSection = () => {
               <TypeAnimation
                 sequence={[
                   'UI/UX Designer', 2000,
-                  'Web Designer', 2000,
-                  'Product Designer', 2000,
+                  'Web & Mobile Designer', 2000,
                 ]}
                 wrapper="span"
                 speed={50}
