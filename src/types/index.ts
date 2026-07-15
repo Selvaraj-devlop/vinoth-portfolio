@@ -13,6 +13,12 @@ export interface Project {
   result: string;
   caseStudyLink?: string;
   liveProjectLink?: string;
+  problem?: string;
+  solution?: string;
+  deliverables?: { title: string; description: string; color: string }[];
+  keyFeatures?: string[];
+  screenModules?: { label: string; title: string; description: string }[];
+  impact?: string;
 }
 
 export interface Skill {
