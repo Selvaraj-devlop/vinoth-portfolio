@@ -33,7 +33,7 @@ export const Footer = () => {
               <a href="https://www.behance.net/vinothp24" target="_blank" rel="noopener noreferrer" className="p-3 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-secondary/50 text-text-muted hover:text-white transition-all duration-300 shadow-lg group">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="group-hover:scale-110 transition-transform"><path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.226-2.477-2.226-1.369 0-2.339.728-2.488 2.226zm-8.504-3h-7.536v-9h7.536c3.413 0 5.122 1.956 5.122 4.12 0 1.579-1.026 2.766-2.457 3.376 1.76.671 2.923 2.016 2.923 4.254 0 2.503-1.921 4.25-5.588 4.25h-7.536v-9zm0 2v-4.5h-4.5v4.5h4.5zm.372 4.5v-4.5h-4.872v4.5h4.872z"/></svg>
               </a>
-              <a href="mailto:vinothuiuxdesigner@gmail.com" className="p-3 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-primary/50 text-text-muted hover:text-white transition-all duration-300 shadow-lg group">
+              <a href="mailto:vinothdesigneruiux@gmail.com" className="p-3 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-primary/50 text-text-muted hover:text-white transition-all duration-300 shadow-lg group">
                 <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
             </div>
@@ -57,11 +57,11 @@ export const Footer = () => {
             <h4 className="font-semibold text-white tracking-widest uppercase text-sm mb-6">Contact</h4>
             <ul className="space-y-4 text-text-muted text-sm font-light">
               <li>
-                <a href="mailto:vinothuiuxdesigner@gmail.com" className="flex items-center group hover:text-primary transition-colors">
+                <a href="mailto:vinothdesigneruiux@gmail.com" className="flex items-center group hover:text-primary transition-colors">
                   <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mr-3 group-hover:bg-primary/20 group-hover:border-primary/50 transition-colors">
                     <Mail size={14} className="text-white group-hover:text-primary" />
                   </div>
-                  vinothuiuxdesigner@gmail.com
+                  vinothdesigneruiux@gmail.com
                 </a>
               </li>
               <li>

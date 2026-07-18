@@ -69,13 +69,13 @@ export const ContactSection = () => {
 
               <div className="space-y-4 flex-grow">
                 {/* Email */}
-                <a href="mailto:vinothuiuxdesigner@gmail.com" className="flex items-start gap-5 hover:-translate-y-1 transition-transform group/link">
+                <a href="mailto:vinothdesigneruiux@gmail.com" className="flex items-start gap-5 hover:-translate-y-1 transition-transform group/link">
                   <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover/link:bg-primary/20 transition-colors shadow-lg mt-1">
                     <Mail className="w-5 h-5 text-primary" />
                   </div>
                   <div>
                     <p className="text-xs text-text-muted uppercase tracking-widest mb-2">Email</p>
-                    <p className="text-white text-base md:text-lg font-medium group-hover/link:text-primary transition-colors break-all">vinothuiuxdesigner@gmail.com</p>
+                    <p className="text-white text-base md:text-lg font-medium group-hover/link:text-primary transition-colors break-all">vinothdesigneruiux@gmail.com</p>
                   </div>
                 </a>
 
@@ -112,7 +112,7 @@ export const ContactSection = () => {
                   <a href="https://www.behance.net/vinothp24" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-secondary/20 hover:border-secondary/50 transition-all hover:-translate-y-1 shadow-lg group/social">
                     <BehanceIcon className="w-5 h-5 text-white group-hover/social:text-secondary transition-colors" />
                   </a>
-                  <a href="mailto:vinothuiuxdesigner@gmail.com" className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-secondary/20 hover:border-secondary/50 transition-all hover:-translate-y-1 shadow-lg group/social">
+                  <a href="mailto:vinothdesigneruiux@gmail.com" className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-secondary/20 hover:border-secondary/50 transition-all hover:-translate-y-1 shadow-lg group/social">
                     <Mail className="w-5 h-5 text-white group-hover/social:text-secondary transition-colors" />
                   </a>
                 </div>
